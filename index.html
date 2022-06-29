@@ -12,6 +12,18 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,500&display=swap"
       rel="stylesheet"
     />
+    <script type="text/javascript" >
+      const hamburger = document.querySelector("hamburger");
+
+const nav_link = document.querySelector(".nav_link");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active")
+  nav_link.classList.toggle("active");
+});
+
+
+    </script>
   </head>
 
   <body>
@@ -21,20 +33,20 @@
           <img src="./logo.png" alt="logo" />
         </div>
         <div class="nav_links">
-          <ul>
-            <li>
+          <ul class="nav_menu">
+            <li class="nav_link">
               <a href="">Why Us </a>
             </li>
-            <li>
+            <li class="nav_link">
               <a href="">Criculam </a>
             </li>
-            <li>
+            <li class="nav_link">
               <a href="">pricing </a>
             </li>
-            <li class="nav_login">
+            <li class="nav_login nav_link >
               <a href="">Login </a>
             </li>
-            <li class="nav_trial">
+            <li class="nav_trial nav_link">
               <a href="">Get Free Trial </a>
             </li>
           </ul>

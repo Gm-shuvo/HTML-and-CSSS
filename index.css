@@ -5,6 +5,7 @@
   font-family: "Google Sans", Roboto, arial, sans-serif;
 }
 
+
 a{
   text-decoration: none;
 }
@@ -17,16 +18,16 @@ nav{
   position: sticky;
   left: 0;
   right: 0;
-  padding: 0 2.5rem;
+  /* padding: 0 2.5rem; */
   z-index: 100;
   box-shadow: -2px -1px 9px 1px rgba(79,76,76,0.69);
 -webkit-box-shadow: -2px -1px 9px 1px rgba(79,76,76,0.69);
 -moz-box-shadow: -2px -1px 9px 1px rgba(79,76,76,0.69);
-overflow: visible;
+overflow: hidden;
 }
 
 .container{
-  width: 100%;
+  width: 90%;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -47,7 +48,7 @@ overflow: visible;
 
 .nav_links ul li{
   display: inline-block;
-  
+  margin: 0 2rem;
 
 }
 
@@ -285,7 +286,7 @@ overflow: visible;
 }
 
 .hamburger{
-  display: block;
+  display: none;
   cursor: pointer;
 }
 
@@ -307,10 +308,9 @@ overflow: visible;
     align-items: center;
     justify-content: center;
     position :relative;
+    padding:
+    2rem;
 
-  }
-  nav_links ul{
-    display: none;
   }
   
   .left_section{
@@ -320,9 +320,7 @@ overflow: visible;
 }
 
 @media only screen and (max-width: 972px){
-  .nav_links ul{
-    display: none;
-  }
+  
   .hamburger{
     display: block;
     z-index: 200;
@@ -339,9 +337,10 @@ overflow: visible;
 
     transform: translateY(-8px rotate(-45deg));
   }
-  .nav_links ul{
+  .nav_links .nav_menu .nav_link{
     position:fixed;
     left:-100%;
+    top: 70px;
     gap: 0;
     flex-direction: column ;
     background-color: #F58120;
@@ -354,11 +353,53 @@ overflow: visible;
     margin: 16px 0;
   }
 
-  .nav_links{
+  .nav_links .nav_menu .nav_link .active{
     left:0;
   }
+  .class_days ul{
+    display: grid;
+    /* flex-wrap: wrap; */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    /* text-align: center; */
+    margin-top: 3rem;
+  }
+  .class_per_week{
+    display: grid;
 
+  }
+  .Number_of_months{
+    display:grid;
+    grid-template-columns: 1fr;
+    padding: 2rem 0;
+  }
+  .number_options ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* align-items: center; */
+    justify-content:center;
+    
+  }
 }
+
+  @media only screen and (max-width: 400px){
+
+    .class_days ul li:nth-child(n){
+      height: 2rem;
+      width: 2rem;
+      align-items: center;
+    }
+
+    .number_options ul li:nth-child(n){
+      height: 2rem;
+      width: 2rem;
+      align-items: center;
+    }
+  }
+
+
+
 
 
 
